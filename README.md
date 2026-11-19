@@ -1,5 +1,18 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Media downloads
+
+The server uses `yt-dlp` for supported video and playlist sites. Audio extraction and format merging use the FFmpeg binary installed by `ffmpeg-static`.
+
+After installing npm dependencies, run:
+
+```bash
+npm run setup:media
+npm run dev
+```
+
+Run `npm run setup:media` on each server environment where the app is deployed. Set `YT_DLP_PATH` if the executable is installed elsewhere. Sites and individual videos may still be unavailable when private, region-restricted, protected, or unsupported by yt-dlp.
+
 ## Getting Started
 
 First, run the development server:
